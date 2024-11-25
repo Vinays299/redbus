@@ -1,0 +1,122 @@
+/* Basic reset and font settings */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e61111;
+  }
+  
+  section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 2em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+  }
+  
+  button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+  /* Styles for bus details */
+  .bus-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+  }
+  
+  .bus-detail {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+  }
+  
+  .bus-detail h4 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #333;
+  }
+  
+  .bus-detail p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  footer {
+    background-image: url('C:/angular workplace/vinayangular/redbus/download2.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 2em;
+    color: white;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+footer .logo {
+    max-width: 150px; 
+    margin-bottom: 1em;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .footer-content {
+    position: relative;
+    z-index: 1; 
+}
+  

@@ -1,0 +1,45 @@
+/* seat-selection.component.css */
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.seat-grid div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.seat-image {
+  width: 80px;
+  height: 80px;
+}
+
+.seat-label {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.seat-grid div.selected .seat-image {
+  border: 2px solid #4caf50; /* Border for selected seats */
+}
+
+.seat-grid div.available .seat-image {
+  border: 2px solid #ccc; /* Border for available seats */
+}
+
+.btn {
+  margin-top: 20px;
+}

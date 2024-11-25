@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Select Your Seats</h1>
+  <div class="seat-grid">
+    <div *ngFor="let seat of seats; let i = index" 
+         [class.selected]="seat" 
+         [class.available]="!seat"
+         (click)="selectSeat(i)">
+      <img [src]="seat ? 'download.png' : 'download.png'" 
+           alt="Seat" 
+           class="seat-image">
+      <div class="seat-label">S {{ i + 1 }}</div>
+    </div>
+  </div>
+  <button (click)="proceedToConfirmation()" class="btn btn-success">Proceed to Confirmation</button>
+</div>

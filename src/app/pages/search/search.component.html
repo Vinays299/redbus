@@ -1,0 +1,53 @@
+<section>
+    <div>
+      <h1>Bus Booking System</h1>
+      <form (ngSubmit)="onSearch()">
+        <div>
+          <input type="text" [(ngModel)]="searchCriteria.from" name="from" placeholder="From">
+        </div>
+        <div>
+          <input type="text" [(ngModel)]="searchCriteria.to" name="to" placeholder="To">
+        </div>
+        <div>
+          <input type="text" [(ngModel)]="searchCriteria.date" name="date" placeholder="Date">
+        </div>
+        <div>
+          <button type="submit">SEARCH BUSES</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <section>
+    <h2>Available Buses</h2>
+    <div class="bus-details" *ngFor="let bus of availableBuses">
+      <div class="bus-detail">
+        <h4><b>{{ bus.name }}</b></h4>
+        <p>{{bus.type }}</p>
+      </div>
+      <div class="bus-detail">
+        <p><strong>{{ bus.departureTime }}</strong></p>
+        <p>Departure</p>
+      </div>
+      <div class="bus-detail">
+        <p><strong>{{ bus.duration }}</strong></p>
+        <p>Duration</p>
+      </div>
+      <div class="bus-detail">
+        <p><strong>{{ bus.arrivalTime }}</strong></p>
+        <p>Arrival</p>
+      </div>
+      <div class="bus-detail">
+        <p><strong>{{ bus.rating }}</strong> ⭐</p>
+        <p>{{ bus.ratingsCount }} Ratings</p>
+      </div>
+      <div class="bus-detail">
+        <p><strong>{{ bus.price }}</strong></p>
+        <p>{{ bus.seatsAvailable }} Seats available</p>
+      </div>
+      <div class="bus-detail">
+        <button>VIEW SEATS</button>
+      </div>
+    </div>
+  </section>
+  

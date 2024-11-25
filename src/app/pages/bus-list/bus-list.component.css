@@ -1,0 +1,50 @@
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  header {
+    background-color: #fc4a0a;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .bus-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bus-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .bus-item h2 {
+    margin-bottom: 10px;
+  }
+  
+  .bus-item button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .bus-item button:hover {
+    background-color: #0056b3;
+  }
+  

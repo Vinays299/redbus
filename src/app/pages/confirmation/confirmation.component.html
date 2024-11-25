@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Booking Confirmation</h1>
+    <div>
+      <h2>Personal Details</h2>
+      <p>Name: {{ bookingData.name }}</p>
+      <p>Email: {{ bookingData.email }}</p>
+      <p>Phone: {{ bookingData.phone }}</p>
+      <p>Departure City: {{ bookingData.departure }}</p>
+      <p>Destination City: {{ bookingData.destination }}</p>
+      <p>Travel Date: {{ bookingData.date }}</p>
+    </div>
+    
+    <div>
+      <h2>Seat Selection</h2>
+      <p>Selected Seats:</p>
+      <div *ngFor="let seat of seatSelection; let i = index">
+        <p *ngIf="seat">Seat {{ i + 1 }}</p>
+      </div>
+    </div>
+    
+    <button (click)="confirmBooking()" class="btn btn-success">Confirm Booking</button>
+  </div>
+  

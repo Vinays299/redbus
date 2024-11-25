@@ -1,0 +1,66 @@
+<div class="container">
+  <h1>Bus Ticket Booking</h1>
+  
+  <div *ngIf="selectedBus">
+    <h2>Selected Bus: {{ selectedBus.name }}</h2>
+    <p>Departure Time: {{ selectedBus.departureTime }}</p>
+    <p>Arrival Time: {{ selectedBus.arrivalTime }}</p>
+  </div>
+
+
+  <form [formGroup]="bookingForm" (ngSubmit)="onProceedToSeats()" class="booking-form">
+    
+    <div class="form-group">
+      <label for="name">Full Name:</label>
+      <input id="name" formControlName="name" type="text" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address:</label>
+      <input id="email" formControlName="email" type="email" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input id="phone" formControlName="phone" type="tel" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="departure">Departure City:</label>
+      <input id="departure" formControlName="departure" type="text" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="destination">Destination City:</label>
+      <input id="destination" formControlName="destination" type="text" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="date">Travel Date:</label>
+      <input id="date" formControlName="date" type="date" class="form-control" />
+    </div>
+
+    
+    <div formArrayName="passengers" class="passenger-section">
+      <div *ngFor="let passenger of passengers.controls; let i = index" [formGroupName]="i" class="passenger-group">
+        <h3>Passenger {{ i + 1 }}</h3>
+        <div class="form-group">
+          <label for="fullName">Full Name:</label>
+          <input id="fullName" formControlName="fullName" type="text" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input id="age" formControlName="age" type="number" class="form-control" />
+        </div>
+
+        <button type="button" (click)="removePassenger(i)" class="btn btn-danger">Remove Passenger</button>
+      </div>
+    </div>
+
+    <button type="button" (click)="addPassenger()" class="btn btn-primary">Add Another Passenger</button>
+
+   
+    <button type="submit" [disabled]="bookingForm.invalid" class="btn btn-success">Proceed to Seat Selection</button>
+  </form>
+</div>
